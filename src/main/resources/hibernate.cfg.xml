@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://sql9.freemysqlhosting.net:3306/sql9140585?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">sql9140585</property>
+    <property name="hibernate.connection.password">reNk6lIN88</property>
+
+    <property name="show_sql">true</property>
+    <property name="format_sql">true</property>
+    <property name="use_sql_comments">true</property>
+    <mapping class="edu.eci.cosw.sharepark.entities.CreditCard"/>
+    <mapping class="edu.eci.cosw.sharepark.entities.Parking"/>
+    <mapping class="edu.eci.cosw.sharepark.entities.User"/>
+    <mapping class="edu.eci.cosw.sharepark.entities.Vehicle"/>
+    <mapping class="edu.eci.cosw.sharepark.entities.Calification"/>
+    <mapping class="edu.eci.cosw.sharepark.entities.Request"/>
+  </session-factory>
+    
+</hibernate-configuration>
