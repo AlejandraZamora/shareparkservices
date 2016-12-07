@@ -1,5 +1,6 @@
 package edu.eci.cosw.sharepark.services;
 
+import edu.eci.cosw.sharepark.entities.Request;
 import edu.eci.cosw.sharepark.entities.User;
 
 import java.util.List;
@@ -12,4 +13,5 @@ public interface UserServices {
     public void addUser(User u);
     public User getUser(Integer id);
     public void updateUser(User u);
+    public void addUserRequest(Request r);
 }
