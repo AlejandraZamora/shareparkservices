@@ -1,6 +1,7 @@
 
 package edu.eci.cosw.sharepark.services;
 
+import edu.eci.cosw.sharepark.entities.Request;
 import edu.eci.cosw.sharepark.entities.User;
 import org.hibernate.Criteria;
 import org.hibernate.Transaction;
@@ -77,4 +78,17 @@ public class UserServicesImplORM implements UserServices{
         se.close();
         sf.close();
     }
+
+    @Override
+    public void addUserRequest(Request r) {
+        SessionFactory sf=getSessionFactory();
+        Session se=sf.openSession();
+        Transaction tx=se.beginTransaction();
+        se.saveOrUpdate("requests", r);
+        tx.commit();
+        se.close();
+        sf.close();
+    }
+
+
 }
