@@ -1,5 +1,6 @@
 package edu.eci.cosw.sharepark.services;
 
+import edu.eci.cosw.sharepark.entities.Request;
 import edu.eci.cosw.sharepark.entities.User;
 
 import java.util.ArrayList;
@@ -49,5 +50,10 @@ public class UserServicesImpl1 implements UserServices{
                 break;
             }
         }
+    }
+
+    @Override
+    public void addUserRequest(Request r) {
+
     }
 }
