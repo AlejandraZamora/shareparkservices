@@ -1,5 +1,6 @@
 package edu.eci.cosw.sharepark.controller;
 
+import edu.eci.cosw.sharepark.entities.Request;
 import edu.eci.cosw.sharepark.entities.User;
 import edu.eci.cosw.sharepark.services.UserServices;
 import edu.eci.cosw.sharepark.services.UserServicesImpl1;
@@ -37,6 +38,11 @@ public class UserController {
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> postUser(@RequestBody(required = true) User u){
         services.addUser(u);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+    @RequestMapping(value="/{iduser}/solicitud", method =RequestMethod.POST)
+    public ResponseEntity<?> postUserRequest(@RequestBody(required = true) Request r){
+        services.addUserRequest(r);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }
 }
